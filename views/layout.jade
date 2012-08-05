@@ -13,6 +13,7 @@ head
     
   != css('twitter/bootstrap')
   != css('twitter/responsive')
+  != css("app")
   script(type="text/javascript", src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.0.2/require.min.js", data-main="/js/main")    
 body
   header.navbar.navbar-fixed-top
@@ -37,7 +38,9 @@ body
         .nav-collapse
           ul.nav
             li.active
-              a(href='#') Home
+              a(href='/') Home
+            li.active
+              a(href='/about') About
                           
   #body.container(data-role="main")
     block content
