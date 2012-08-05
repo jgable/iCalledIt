@@ -13,8 +13,6 @@ app = express();
 
 app.use(assets());
 
-console.log("Static Dir: " + process.cwd() + '/public');
-
 app.use(express["static"](process.cwd() + '/public'));
 
 app.set('view engine', 'jade');

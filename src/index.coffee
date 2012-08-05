@@ -9,13 +9,13 @@ app = express()
 app.use assets()
 
 # Set the public folder as static assets
-console.log "Static Dir: " + process.cwd() + '/public'
 app.use express.static(process.cwd() + '/public')
 
 # Set View Engine
 app.set 'view engine', 'jade'
 
 # Prime the connect-assets to make all the js/coffee files available
+# TODO: Make this into a module, clear it out of here.
 loadJSFile = (file) ->
   stat = fs.statSync file
   if stat?.isDirectory()
